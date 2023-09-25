@@ -48,8 +48,8 @@ root.geometry(f"{screen_width}x{screen_height}+0+0")
 root.attributes("-fullscreen", True)
 
 # キャンバスの作成
-canvas = tk.Canvas(root, width=screen_width, height=screen_height, bg="black")
-canvas.pack()
+canvas = tk.Canvas(root, bg="black")
+canvas.place(x=-5, y=-5, width=screen_width + 10, height=screen_height + 10)
 
 # 円の中心
 circle_center = (screen_width / 2, screen_height / 2)
