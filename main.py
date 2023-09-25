@@ -23,7 +23,7 @@ if __name__ == "__main__":
     window = WindowCanvasManager()
     drow_voice_angle_arc_and_text_forever_thread = Thread(
         target=window.draw_voice_angle_arc_and_text_forever,
-        args=(voice_angle_queue),
+        args=(voice_angle_queue,),
     )
     drow_voice_angle_arc_and_text_forever_thread.start()
 
