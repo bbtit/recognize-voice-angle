@@ -41,6 +41,14 @@ class WindowCanvasManager:
         self.drown_arc_id = None
         self.drown_text_id = None
 
+        self.canvas.create_oval(
+            self.window_center[0] - 10,
+            self.window_center[1] - 10,
+            self.window_center[0] + 10,
+            self.window_center[1] + 10,
+            outline="red",
+        )
+
     def create_arc(self, *args, **kwargs):
         self.drown_arc_id = self.canvas.create_arc(*args, **kwargs)
         return self.drown_arc_id
