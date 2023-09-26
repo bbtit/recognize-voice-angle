@@ -85,11 +85,11 @@ class SoundRecorder:
         return result
 
     def audio_callback(self, in_data, frame_count, time_info, status):
-        speech_detected = self.read_parameter("SPEECHDETECTED")
-        self.chunk_queue.put((in_data, speech_detected))
-        if speech_detected == 1:
-            voice_angle = self.read_parameter("DOAANGLE")
-            self.voice_angle_queue.put(voice_angle)
+        # speech_detected = self.read_parameter("SPEECHDETECTED")
+        # self.chunk_queue.put((in_data, speech_detected))
+        # if speech_detected == 1:
+        voice_angle = self.read_parameter("DOAANGLE")
+        self.voice_angle_queue.put(voice_angle)
         return (in_data, pyaudio.paContinue)
 
     def start_recording(self):
