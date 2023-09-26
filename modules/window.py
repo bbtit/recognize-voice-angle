@@ -49,6 +49,19 @@ class WindowCanvasManager:
             outline="red",
         )
 
+        for start_angle in range(0, 346, 15):
+            self.canvas.create_arc(
+                self.upper_left[0],
+                self.upper_left[1],
+                self.lower_right[0],
+                self.lower_right[1],
+                start=start_angle - 1,
+                extent=3,
+                style=tk.ARC,
+                outline="red",
+                width=3,
+            )
+
     def create_arc(self, *args, **kwargs):
         self.drown_arc_id = self.canvas.create_arc(*args, **kwargs)
         return self.drown_arc_id
