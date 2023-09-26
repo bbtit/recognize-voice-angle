@@ -89,14 +89,14 @@ class WindowCanvasManager:
                     self.lower_right[0],
                     self.lower_right[1],
                     start=0,
-                    extent=10,
+                    extent=5,
                     style=tk.ARC,
                     outline="red",
                     width=10,
                 )
             # 円弧の角度を更新
             else:
-                self.update_arc_angle(self.drown_arc_id, input_degree - 5)
+                self.update_arc_angle(self.drown_arc_id, input_degree - 2)
 
         self.root.after(
             34,
